@@ -16,7 +16,7 @@
        
         sudo pip3 install virtualenv
 
-5. Create virtualenv
+5. Create virtualenv in dir ~/py3-venv-pgadmin
        
         virtualenv --system-site-packages --no-setuptools --python=python3.5 ~/py3-venv-pgadmin
 
@@ -54,7 +54,11 @@
         cd ~/pgadmin4-1.0/web
         touch config_local.py
         nano config_local.py
+   write:
+        
         SERVER_MODE = False
+   run:
+        
         python3 setup.py
 
 13. Run pgAdmin4
