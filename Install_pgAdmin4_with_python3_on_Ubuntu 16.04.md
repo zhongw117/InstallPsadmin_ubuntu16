@@ -1,10 +1,10 @@
-# Install pgAdmin4 with python3 on ubuntu 16.04
+# Install pgAdmin4 with python3 on Ubuntu 16.04
 
 1. Get source pgAdmin4
 
         wget https://ftp.postgresql.org/pub/pgadmin3/pgadmin4/v1.0/source/pgadmin4-1.0.tar.gz
 
-2. unpack pgadmin4-1.0.tar.gz in home dir
+2. Unpack pgadmin4-1.0.tar.gz in home dir
 
 3. Install pip3
     
