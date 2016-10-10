@@ -8,11 +8,11 @@
 
 3. Install pip3
     
-        apt install python3-pip
+        sudo apt install python3-pip
 
 4. Install virtualenv
        
-        pip3 install virtualenv
+        sudo pip3 install virtualenv
 
 5. Create virtualenv
        
@@ -30,7 +30,7 @@
 
 8. Install libpq-dev
        
-        apt install libpq-dev
+        sudo apt install libpq-dev
 
 9. Install requrements
        
@@ -39,7 +39,7 @@
 
 10. Install qt-sdk
        
-        apt install qt-sdk
+        sudo apt install qt-sdk
 
 11. Build the runtime
     
