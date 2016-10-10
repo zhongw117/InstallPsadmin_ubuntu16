@@ -66,3 +66,10 @@
 15. Remove qt-sdk
         
         apt purge qt-sdk
+
+16. For run bash script ~/pgadmin4-1.0/pgadmin4.sh
+             
+        #!/usr/bin/env bash
+        cd ~/py3-venv-pgadmin/bin
+        source activate
+        python3 ~/pgadmin4-1.0/web/pgAdmin4.py
