@@ -5,6 +5,8 @@
         wget https://ftp.postgresql.org/pub/pgadmin3/pgadmin4/v1.0/source/pgadmin4-1.0.tar.gz
 
 2. Unpack pgadmin4-1.0.tar.gz in home dir
+        
+        tar xvzf pgadmin4-1.0.tar.gz -C ~/
 
 3. Install pip3
     
