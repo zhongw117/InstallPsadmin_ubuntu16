@@ -1,7 +1,9 @@
 1. Get source pgAdmin4
+
 ```
     https://ftp.postgresql.org/pub/pgadmin3/pgadmin4/v1.0/source/pgadmin4-1.0.tar.gz
 ```
+
 2. unpak pgadmin4-1.0.tar.gz in home dir
 3. Install pip3
     apt install python3-pip
