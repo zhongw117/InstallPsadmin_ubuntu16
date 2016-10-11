@@ -34,7 +34,7 @@
        
         sudo apt install libpq-dev
 
-9. Install requrements
+9. Install requrements for python 3
        
         cd ~/pgadmin4-1.0
         pip3 install -r requirements_py3.txt
