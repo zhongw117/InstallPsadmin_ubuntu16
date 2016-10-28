@@ -81,5 +81,3 @@
         python3 ~/pgadmin4-1.0/web/pgAdmin4.py
 
 ![screenshot pgAdmin4](https://s18.postimg.org/q0kghmg49/pg_Admin4_py3.png)
-
-[Archive pgAdmin4 with py3-venv, for use you need to perform steps: 3, 4, 8 and run pgadmin4.sh](https://drive.google.com/file/d/0Bx5RBhf-pBQcZGR4ZTlMTEc0SXc/view)
