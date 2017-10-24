@@ -70,7 +70,7 @@
    
    write at the end of file: 
         
-        alias pgadmin4='~/py3-venv-pgadmin/pgadmin.sh'
+        alias pgadmin4='~/py3-venv-pgadmin/pgadmin4.sh'
    
    reload bashrc
         
