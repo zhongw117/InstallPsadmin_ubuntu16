@@ -1,4 +1,4 @@
-# Install pgAdmin4 2.0 with python3 on Ubuntu 16.04
+# Install pgAdmin4 v2.0 with python3 on Ubuntu 16.04 DESKTOP mode
 
 1. Get source code pgAdmin4
 
