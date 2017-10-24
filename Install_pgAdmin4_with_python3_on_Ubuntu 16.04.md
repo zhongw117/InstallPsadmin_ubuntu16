@@ -1,83 +1,67 @@
-# Install pgAdmin4 with python3 on Ubuntu 16.04
+# Install pgAdmin4 2.0 with python3 on Ubuntu 16.04
 
 1. Get source code pgAdmin4
 
-        wget https://ftp.postgresql.org/pub/pgadmin3/pgadmin4/v1.0/source/pgadmin4-1.0.tar.gz
+        wget https://ftp.postgresql.org/pub/pgadmin/pgadmin4/v2.0/pip/pgadmin4-2.0-py2.py3-none-any.whl
 
-2. Unpack pgadmin4-1.0.tar.gz in home dir
-        
-        tar xvzf pgadmin4-1.0.tar.gz -C ~/
-
-3. Install pip3
+2. Install pip3
     
         sudo apt install python3-pip
 
-4. Install virtualenv
+3. Install virtualenv
        
         sudo pip3 install virtualenv
 
-5. Create virtualenv in dir ~/py3-venv-pgadmin
+4. Create virtualenv in dir ~/py3-venv-pgadmin
        
         virtualenv --system-site-packages --no-setuptools --python=python3.5 ~/py3-venv-pgadmin
 
-6. Activate virtualenv
+5. Activate virtualenv
        
         cd ~/py3-venv-pgadmin/bin
         source activate
 
-7. Check pip3
+6. Check pip3
        
         which pip3
         ~/py3-venv-pgadmin/bin/pip3
 
-8. Install libpq-dev
+4. Install pgAdmin4
        
-        sudo apt install libpq-dev
+        pip3 install pgadmin4-2.0-py2.py3-none-any.whl
 
-9. Install requrements for python 3
-       
-        cd ~/pgadmin4-1.0
-        pip3 install -r requirements_py3.txt
-
-10. Install qt-sdk
-       
-        sudo apt install qt-sdk
-
-11. Build the runtime
-    
-        cd ~/pgadmin4-1.0/runtime
-        qmake
-        make
-
-12. [For desktop deployment](https://www.pgadmin.org/docs4/dev/desktop_deployment.html)
+5. [For desktop deployment](https://www.pgadmin.org/docs4/dev/desktop_deployment.html)
         
-        cd ~/pgadmin4-1.0/web
+        cd ~/py3-venv-pgadmin/lib/python3.5/site-packages/pgadmin4
         touch config_local.py
         nano config_local.py
    write:
         
+        import os
         SERVER_MODE = False
+        DATA_DIR = os.path.realpath(os.path.expanduser(u'~/.pgadmin/'))
+        LOG_FILE = os.path.join(DATA_DIR, 'pgadmin4.log')
+        SQLITE_PATH = os.path.join(DATA_DIR, 'pgadmin4.db')
+        SESSION_DB_PATH = os.path.join(DATA_DIR, 'sessions')
+        STORAGE_DIR = os.path.join(DATA_DIR, 'storage')
+
    run:
         
-        python3 setup.py
+        python3 ~/py3-venv-pgadmin/lib/python3.5/site-packages/pgadmin4/setup.py
 
-13. Run pgAdmin4
+6. Run pgAdmin4
         
-        python3 pgAdmin4.py
+        python3 ~/py3-venv-pgadmin/lib/python3.5/site-packages/pgadmin4/pgAdmin4.py
 
-14. Exit virtualenv
+7. Exit virtualenv
         
         deactivate
 
-15. Remove qt-sdk
-        
-        apt purge qt-sdk
-
-16. For run pgadmin4 create script ~/pgadmin4-1.0/pgadmin4.sh
+8. For run pgadmin4 create script ~/py3-venv-pgadmin/pgadmin4.sh
              
         #!/usr/bin/env bash
         cd ~/py3-venv-pgadmin/bin
         source activate
-        python3 ~/pgadmin4-1.0/web/pgAdmin4.py
+        python3 ~/py3-venv-pgadmin/lib/python3.5/site-packages/pgadmin4/pgAdmin4.py
 
 ![screenshot pgAdmin4](https://s18.postimg.org/q0kghmg49/pg_Admin4_py3.png)
