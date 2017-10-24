@@ -64,4 +64,18 @@
         source activate
         python3 ~/py3-venv-pgadmin/lib/python3.5/site-packages/pgadmin4/pgAdmin4.py
 
-![screenshot pgAdmin4](https://s18.postimg.org/q0kghmg49/pg_Admin4_py3.png)
+9. Create alias for bash
+        
+        nano ~/.bashrc
+   
+   write at the end of file: 
+        
+        alias pgadmin4='~/py3-venv-pgadmin/pgadmin.sh'
+   
+   reload bashrc
+        
+        source ~/.bashrc
+   
+   now you can run pgadmin
+        
+        pgadmin4
