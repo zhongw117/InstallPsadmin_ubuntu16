@@ -1,6 +1,6 @@
 ## Install pgAdmin4 v2.0 with python3 on Ubuntu 16.04 DESKTOP mode
 
-1. Get source code pgAdmin4
+1. Get Python Wheel pgAdmin4
 
         wget https://ftp.postgresql.org/pub/pgadmin/pgadmin4/v2.0/pip/pgadmin4-2.0-py2.py3-none-any.whl
 
