@@ -1,2 +1,3 @@
-- Refer to:
-[Origin Link](https://gist.github.com/hiteshgarg14/641955d712eb92c1679fae250bfdfbae)
+- Neglect the md files
+- Refer to this (https://linoxide.com/linux-how-to/how-install-pgadmin4-ubuntu/)
+- Password for both the pgadmin4 and postgresql are the same with mysql password of home desktop
